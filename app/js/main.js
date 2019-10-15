@@ -53,16 +53,16 @@
 
 
 
-		$(".short-logotypes-items.owl-carousel").owlCarousel({
+		$(".short-special-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,
-			dots: false,
+			dots: true,
 			dotsEach: true,
 			autoplay: true,
 			touchDrag: false,
 			responsive:{
 				0:{items:1},
-				991:{items:5}
+				991:{items:2}
 			},
 			navText : owlBtn,
 			margin: 30
@@ -182,7 +182,7 @@
 				initialIndex: 0,
 				friction: 0.5,
 				//selectedAttraction: 1,
-				prevNextButtons: checkSm(),
+				prevNextButtons: true,
 				draggable: false,
 				wrapAround: true,
 				pageDots: true,

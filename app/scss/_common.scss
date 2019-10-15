@@ -348,9 +348,7 @@ table {
 		}
 	}
 }
-[underline]{
-	text-decoration: underline;
-}
+
 
 
 .font-family-1{font-family: $font-family-1;}
@@ -574,8 +572,9 @@ table {
 	text-align: center;	
 	overflow: hidden;
 	font-family: $font-family-1;
-	font-weight: 700;
+	font-weight: bold;
 	text-transform: uppercase;
+	border-radius: 7px;
 	&.text-wrap{
 		white-space: wrap;
 	}
@@ -587,12 +586,12 @@ table {
 		line-height: normal;
 		position: relative;
 		&:not([class*="p-h"]){
-			padding-left: 45px;
-			padding-right: 45px;
+			padding-left: 30px;
+			padding-right: 30px;
 		}
 		&:not([class*="p-v"]){
-			padding-top: 15px;
-			padding-bottom: 15px;
+			padding-top: 10px;
+			padding-bottom: 10px;
 		}
 		&:not([class*="flex"]){
 			display: block;
@@ -631,9 +630,19 @@ table {
 		background-color: $color-1;
 	}	
 	&:not(.changecolor-none):hover{
-		//box-shadow: 0px 0px 15px 2px $color-1;
 		background-repeat: repeat;
 		background-color: darken($color-1, 5%);
+	}
+	&.icon-right{
+		span{
+			vertical-align: middle;
+		}
+		i{
+			vertical-align: middle;
+			font-size: 25px;
+			margin-right: -15px;
+			padding-left: 15px;
+		}
 	}
 	&.radius{
 		border-radius: 20px;
@@ -918,6 +927,7 @@ thined{
 h1,h2,h3,h4,h5{
 	color: inherit;
 	line-height: 140%;
+	font-weight: 500;
 	font-family: $font-family-1;
 }
 
@@ -929,7 +939,6 @@ h1, h2, h3, h4{
 h1{
 	font-size: em(36);
 	margin-bottom: 15px;
-	font-weight: 600;
 	line-height: 120%;
 	@media (max-width: 991px) {
 		font-size: em(26);
@@ -938,13 +947,11 @@ h1{
 h2{
 	font-size: em(28);
 	margin-bottom: 15px;
-	font-weight: 600;
 	@media (max-width: 430px) {
 		font-size: em(23);
 	}
 } 
 h3{
-	font-weight: 600;
 	font-size: em(20);
 	@media (max-width: 430px) {
 		font-size: em(17/1.1);
@@ -1016,7 +1023,7 @@ main{
 	p{
     font-style: normal;
 		position: relative;
-		line-height: 135%;
+		line-height: 170%;
 	}
 	ul:not([class]){
 		text-align: left;
