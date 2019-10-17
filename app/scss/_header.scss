@@ -60,7 +60,7 @@ $header-min-menu: 70px;
 	.link-content{
 		text-transform: uppercase;
 		font-weight: 600;
-		color: #666666;
+		color: $color-gray-4;
 		padding-left: 15px;
 		padding-right: 15px;
 	}
@@ -85,7 +85,7 @@ $header-min-menu: 70px;
 }
 
 .facecomp{
-	color: #666666;
+	color: $color-gray-4;
 	display: flex;
 	align-items: center;
 	.desc-content{
@@ -190,7 +190,7 @@ $header-min-menu: 70px;
 	.fa-home{
 		font-size: 22px;
 	}
-	ul:not([class*="sub-menu"]){
+	ul.menu-list{
 		display: flex;
 	  justify-content: space-between;
 	  text-align: right;
@@ -199,9 +199,6 @@ $header-min-menu: 70px;
 		height: 100%;
 		@extend .letter-none;
 		& > li{
-			height: 100%;
-			display: inline-block;
-			position: relative;
 			letter-spacing: 0;
 			& > a{
 				height: 100%;
@@ -243,10 +240,47 @@ $header-min-menu: 70px;
 		&.active{
 			background-color: $color-2;
 		}
-
 	}
 }
-
+.undermenu{
+	position: absolute;
+	text-align: left;
+	ul{
+		min-width: 220px;
+	}
+	li{
+		display: block;
+		width: 100%;
+		&:not(:last-child){
+			border-bottom: 1px solid $color-gray-4;
+		}
+		&:hover{
+			a{
+				background-color: $color-1;
+				color: #333;
+				i{
+					color: #333;	
+				}
+			}
+		}
+	}
+	a{
+		padding: 15px 20px;
+		display: block;
+		background-color: #333;
+		color: white;
+		i{
+			@extend .trans-v-center;
+			color: $color-1;
+			right: 15px;
+		}
+	}
+	.listlvl-2{
+		position: absolute;
+		left: 100%;
+		margin-top: -47px;
+	}
+}
 ul[class*="sub-menu"]{
 	position: absolute;
 	font-weight: 300;

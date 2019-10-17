@@ -141,9 +141,21 @@
 							<div class="clearfix">
 								<div class="menu p-h-15">
 									<nav>
-										<ul>
+										<ul class="menu-list">
 											<li><a href="index.html"><i class="fa fa-home"></i></a></li>
-											<li><a href="index.html">Модельный ряд</a></li>
+											<li><a href="index.html">Модельный ряд</a>
+												<div class="undermenu">
+													<ul class="listlvl-1">
+														<li><a href="">Легковые автомобили<i class="fa fa-angle-right"></i></a></li>
+														<li><a href="">Коммерческий транспорт<i class="fa fa-angle-right"></i></a>
+															<ul class="listlvl-2">
+																<li><a href="">Легковые автомобили<i class="fa fa-angle-right"></i></a></li>
+																<li><a href="">Коммерческий транспорт<i class="fa fa-angle-right"></i></a></li>
+															</ul>
+														</li>
+													</ul>
+												</div>
+											</li>
 											<li><a href="index.html">Автомобили в наличии</a></li>
 											<li><a href="index.html">Сервис и аксессуары</a></li>
 											<li><a href="index.html">Корпоративным клиентам</a></li>
@@ -573,7 +585,6 @@
 				</div>
 			</div>
 
-
 			<div class="short-special">
 				<div class="container">
 					<div class="entry-header text-center m-v-15">
@@ -687,14 +698,15 @@
 
 			<div class="short-info">
 				<div class="container">
-					<div class="info-accordion panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+					<div class="info-accordion panel-group p-b-30" id="accordion" role="tablist" aria-multiselectable="true">
+
 					  <div class="panel panel-default">
 					    <div class="panel-heading">
 					      <h4 class="panel-title">
-					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#prc-1" aria-expanded="true">Топливозаправщики<i class="fa fa-angle-up"></i></a>
+					        <a role="button" data-toggle="collapse" data-parent="#accordion" href="#prc-1" aria-expanded="false">Топливозаправщики<i class="fa fa-angle-up"></i></a>
 					      </h4>
 					    </div>
-					    <div id="prc-1" class="panel-collapse collapse in" role="tabpanel">
+					    <div id="prc-1" class="panel-collapse collapse" role="tabpanel">
 					      <div class="panel-body text-left p-v-10 text-item">
 					        <p>В течение долгого времени вам будет предложено указать предыдущего арендодателя, банка, сотрудника и/или ссылки на характер, чтобы продемонстрировать доказательство дохода и пригодности. Вам также необходимо будет предоставить удостоверение личности, подтверждение адреса и подтверждение "права на аренду" в Англии через паспорт или комбинацию паспорта и действительной визы.</p>
 					        <p>Для краткого разрешения вам потребуется предъявить подтверждение адреса и паспорт, национальное удостоверение личности или водительские права, а также справку о занятости или характере с указанием, почему требуется короткий отпуск.</p>
@@ -702,6 +714,7 @@
 					      </div>
 					    </div>
 					  </div>
+
 					</div>
 				</div>
 			</div>

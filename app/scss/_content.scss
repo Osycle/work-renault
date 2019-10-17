@@ -685,6 +685,30 @@ figcaption{
 	.panel-heading{
 		background-color: white;
 		border: none;
+		padding: 0;
+		a{
+			padding: 10px 15px;
+			display: block;
+			position: relative;
+			&[aria-expanded="true"]{
+				background-color: $color-1;
+				i{
+
+					&:before{
+						transform: rotate(180deg);
+					}
+				}
+			}
+			i{
+				&:before{
+					display: inline-block;
+					transition: all 0.3s ease;
+				}
+				position: absolute;
+				right: 30px;
+				@extend .trans-v-center;
+			}
+		}
 	}
 	.panel-body{
 		border: none !important;
