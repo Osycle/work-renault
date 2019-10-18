@@ -215,19 +215,25 @@ $header-min-menu: 70px;
 			&:hover{
 				border-color: $color-1;
 				color: $color-1;
-				.sub-menu-1{
-					transform: matrix(1,0,0,1,0,0);
+				.listlvl-1{
 					opacity: 1;
-					//visibility: visible;
-					&, li, a{
-						pointer-events: auto !important;
-					}
-					transition: 
-											opacity 0.3s ease-in-out,
-											transform 0.3s ease-in-out;
 				}
 			}
-
+		}
+		&:before{
+			@extend .clafclear;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(black, 0.0);
+			top: 100%;
+			transition: all 0.3s ease;
+			left: calc( -50vw + 585px);
+			pointer-events: none;
+		}
+		&:hover{
+			&:before{
+				background-color: rgba(black, 0.5);
+			}
 		}
 	}
 	li{
@@ -242,45 +248,121 @@ $header-min-menu: 70px;
 		}
 	}
 }
-.undermenu{
-	position: absolute;
-	text-align: left;
-	ul{
+
+#header{
+	.menu-list{
+		& > li{
+			&:hover{
+				.listlvl-1{
+					opacity: 1;
+					&, *{ pointer-events: auto; }
+					& > li{
+						&:hover{
+							& > .listlvl-2{
+								opacity: 1;
+								&, *{ pointer-events: auto; }
+								& > li{
+									&:hover{
+										.list-cars{
+											opacity: 1;
+											&, *{ pointer-events: auto; }
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}		
+		}
+	}
+	.listlvl-1, .listlvl-2, .list-cars{
+		opacity: 0;
+		transform: all 0.3s ease, pointer-events 0s linear;
+		position: absolute;
+		&, *{
+			pointer-events: none;
+		}
+	}
+	.listlvl-1{
 		min-width: 220px;
 	}
-	li{
-		display: block;
-		width: 100%;
-		&:not(:last-child){
-			border-bottom: 1px solid $color-gray-4;
-		}
-		&:hover{
-			a{
-				background-color: $color-1;
-				color: #333;
+	.listlvl-1, .listlvl-2{
+		text-align: left;
+		//pointer-events: auto;
+		& >	li{
+			display: block;
+			width: 100%;
+			&:not(:last-child){
+				border-bottom: 1px solid $color-gray-4;
+			}
+			&:hover{
+				& > a{
+					background-color: $color-1;
+					color: #333;
+					i{
+						color: #333;	
+					}
+				}
+			}
+			& > a{
+				padding: 12px 20px;
+				display: block;
+				background-color: $color-gray-5;
+				color: white;
 				i{
-					color: #333;	
+					@extend .trans-v-center;
+					color: $color-1;
+					right: 15px;
 				}
 			}
 		}
 	}
-	a{
-		padding: 15px 20px;
-		display: block;
-		background-color: #333;
-		color: white;
-		i{
-			@extend .trans-v-center;
-			color: $color-1;
-			right: 15px;
-		}
-	}
+
 	.listlvl-2{
 		position: absolute;
+		min-width: 150px;
 		left: 100%;
-		margin-top: -47px;
+		top: 0;
 	}
 }
+.list-cars{
+	position: absolute;
+	top: 0;
+	
+	left: 100%;
+	width: 650px;
+	padding: 30px 15px;
+	background-color: white;
+	.flex{
+		justify-content: center;
+		background-color: white;
+		flex-wrap: wrap;
+		max-height: 360px;
+		overflow-y: auto;
+	}
+	figure{
+		width: 33.3%;
+		text-align: center;
+		outline: 1px solid transparent;
+		outline-offset: -1px;
+		&:hover{
+			outline: 1px solid rgba($color-gray-3, 0.3);
+		}
+		figcaption{
+			font-weight: 400;
+			color: black;
+		}
+	}
+	.img{
+		background-size: contain;
+		height: 100px;
+		@media (max-width: 991px) {
+			height: 60px;
+		}
+	}
+}
+
 ul[class*="sub-menu"]{
 	position: absolute;
 	font-weight: 300;
@@ -338,8 +420,6 @@ ul[class*="sub-menu"]{
 	margin-top: -40px;
 	transform: matrix(1,0,0,1, 10,0);
 }
-
-
 
 
 
@@ -446,11 +526,28 @@ ul[class*="sub-menu"]{
 
 
 // ---MM-MENU---
+.mm-panels{
+	.list-cars{
+		padding: 0;
+		width: 100%;
+		left: 0;
+		top: 0;
+		margin: 0 !important;
+		position: relative;
+		.flex{
+			max-height: inherit;
+		}
+		figure{
+			width: 50%;
+		}
+	}
+}
 .mm-navbar{
 	.close-btn{
 		width: 35px;
 		height: 35px;
 	}
+
 }
 .mm-slideout{
 	z-index: auto;

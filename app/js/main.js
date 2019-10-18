@@ -182,7 +182,7 @@
 				initialIndex: 0,
 				friction: 0.5,
 				//selectedAttraction: 1,
-				prevNextButtons: true,
+				prevNextButtons: !checkSm(),
 				draggable: false,
 				wrapAround: true,
 				pageDots: true,
