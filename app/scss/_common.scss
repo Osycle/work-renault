@@ -623,15 +623,33 @@ table {
 		font-weight: 700;
 		font-size: 0.75em;
 	}
+	position: relative;
+	&:before, &:after{
+		@extend .clafclear;
+		background-color: rgba(white, 0.11);
+		left: -100%;
+		width: 70%;
+		transition: all 0.5s linear;
+		filter: blur(1px);
+		pointer-events: none;
+		top: 0;
+	}
+	&:after{
+		transition-delay: 0.3s;
+	}
 	&:not([class*="color-"]):not([class*="bg-color"]){
 		color: black;
 	}
 	&:not([class*="bg-color"]){
 		background-color: $color-1;
 	}	
+	//hover
 	&:not(.changecolor-none):hover{
 		background-repeat: repeat;
 		background-color: darken($color-1, 5%);
+		&:before, &:after{
+			left: 100%;
+		}
 	}
 	&.icon-right{
 		span{
@@ -642,6 +660,15 @@ table {
 			font-size: 25px;
 			margin-right: -15px;
 			padding-left: 15px;
+		}
+		&.box-xs-10{
+			i{
+				right: 20px;
+				padding-left: 0;
+				margin-right: 0;
+				position: absolute;
+				@extend .trans-v-center;
+			}
 		}
 	}
 	&.radius{
@@ -1014,7 +1041,7 @@ main{
 	min-height: 300px;
 	background-position: center bottom;
 	background-repeat: no-repeat;
-	@extend .list-style-1;
+	//@extend .list-style-1;
 	@media (max-width: 991px){
 		text-align: center ;
 		overflow: hidden;
@@ -1029,6 +1056,13 @@ main{
 		text-align: left;
 		margin-top: 10px;
 		margin-bottom: 10px;
+		list-style: disc;
+    padding-left: 15px;
+    li{
+    	margin-top: 5px;
+    	line-height: 170%;
+    	margin-bottom: 5px;
+    }
 	}
 	*:not(figure):not(div){
 		//letter-spacing: 0.5px;

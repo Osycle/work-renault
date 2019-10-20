@@ -220,21 +220,6 @@ $header-min-menu: 70px;
 				}
 			}
 		}
-		&:before{
-			@extend .clafclear;
-			width: 100vw;
-			height: 100vh;
-			background-color: rgba(black, 0.0);
-			top: 100%;
-			transition: all 0.3s ease;
-			left: calc( -50vw + 585px);
-			pointer-events: none;
-		}
-		&:hover{
-			&:before{
-				background-color: rgba(black, 0.5);
-			}
-		}
 	}
 	li{
 		display: inline-block;
@@ -286,6 +271,21 @@ $header-min-menu: 70px;
 	}
 	.listlvl-1{
 		min-width: 220px;
+		&:before{
+			@extend .clafclear;
+			width: 100vw;
+			height: 100vh;
+			background-color: rgba(black, 0.0);
+			top: 00;
+			transition: all 0.3s ease;
+			left: calc( -50vw + 535px);
+			pointer-events: none;
+		}
+		&:hover{
+			&:before{
+				background-color: rgba(black, 0.5);
+			}
+		}
 	}
 	.listlvl-1, .listlvl-2{
 		text-align: left;
@@ -344,10 +344,9 @@ $header-min-menu: 70px;
 	figure{
 		width: 33.3%;
 		text-align: center;
-		outline: 1px solid transparent;
-		outline-offset: -1px;
+		border: 1px solid transparent;
 		&:hover{
-			outline: 1px solid rgba($color-gray-3, 0.3);
+			border: 1px solid rgba($color-gray-3, 0.3);
 		}
 		figcaption{
 			font-weight: 400;
