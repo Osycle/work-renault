@@ -273,23 +273,31 @@ table {
 	border-collapse: collapse;
 	width: 100%;
 	text-align: left;
-	@extend .table; 
 	a{
 		&:hover{
 			text-decoration: underline;
 		}
 	}
-	th{
-		background-color: rgba($color-gray-1, 1);
-		padding-top: 30px;
-		color: black;
+	thead{
+		tr{
+			th{
+				background-color: rgba($color-1, 1);
+				padding-top: 30px;
+				color: black;
+				padding: 10px 10px;
+			}
+		}
 	}
-	td{
-		border-color: rgba($color-gray-1, 1);
-	}
+
 	tbody{
+		tr{
+			td{
+				border-color: rgba($color-gray-1, 1);
+				padding: 10px;
+			}
+		}
 		tr:nth-child(odd){
-			background-color: rgba($color-gray-1, 0.4);
+			background-color: rgba($color-gray-3, 0.15);
 		}
 		tr:nth-child(even){
 			background-color: transparent;
@@ -921,6 +929,13 @@ ol{
 hr{
 	margin-top: 15px;
 	margin-bottom: 15px;
+	&.style-1{
+		height: 5px;
+		background-color: $color-1;
+		border: none;
+		width: 35%;
+		border-radius: 8px;
+	}
 }
 input:focus, button:focus{
 	outline: transparent;

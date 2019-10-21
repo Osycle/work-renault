@@ -17,6 +17,7 @@ $header-min-menu: 70px;
 	position: relative;
 	pointer-events: none;
 	//font-family: $font-family-1;
+	box-shadow: 0 -14px 20px black;
 	&:not([class*="bg-color"]){
 		background-color: transparent;
 	}
