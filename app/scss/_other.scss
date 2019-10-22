@@ -450,26 +450,25 @@ html{
 
 .select2-container--default{
 	.select2-selection--single{
-		//border-radius: 15px;
-		border: 1px solid $color-gray-1;
+		border-radius: 5px !important;
+		border: 1px solid $color-gray-3;
 		background-color: transparent;
-		height: 36px;		
-		border-radius: 0;
+		height: 40px;		
 		.select2-selection__rendered{
-			line-height: 36px;
+			line-height: 40px;
 		}
 		&:focus{
 			outline: none;
 		}
 		.select2-selection__rendered{
-			color: $color-gray-3;
+			color: black;
 		}
 		.select2-selection__arrow {
-			background-color: $color-gray-2;
-			border-radius: 0;
-			width: 26px;
+			background-color: $color-1;
+			border-radius: 5px;
+			width: 40px;
 			b{
-				border-color: $color-3 transparent transparent transparent;
+				border-color: black transparent transparent transparent;
 			}
 		}
 	}
@@ -477,7 +476,7 @@ html{
 		.select2-selection--single{
 			.select2-selection__arrow {
 				b{
-					border-color: transparent transparent $color-3 transparent;
+					border-color: transparent transparent black transparent;
 				}
 			}
 		}
@@ -502,7 +501,8 @@ html{
 	}
 }
 .select2-dropdown{
-	border-radius: 0;
+	
+	@extend .shadow-def;
 	border-color: $color-gray-1;
 }
 

@@ -27,11 +27,7 @@
 		if ( $(".js-select").length )
 			$(".js-select").select2({
 				placeholder: "Выберите...",
-				// ajax: {
-				//   url: 'https://api.github.com/search/repositories',
-				//   dataType: 'json'
-				//   // Additional AJAX parameters go here; see the end of this chapter for the full code of this example
-				// },
+				minimumResultsForSearch: Infinity,
 				allowClear: false
 			});
 		
@@ -67,6 +63,35 @@
 			navText : owlBtn,
 			margin: 30
 		});
+		$(".offers-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: !checkSm(),
+			dotsEach: true,
+			autoplay: true,
+			touchDrag: false,
+			responsive:{
+				0:{items:1},
+				991:{items:1}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+		$(".compl-items.owl-carousel").owlCarousel({
+			nav: true,
+			//items: 3,
+			dots: false,
+			dotsEach: true,
+			autoplay: true,
+			touchDrag: false,
+			responsive:{
+				0:{items:1},
+				991:{items:3}
+			},
+			navText : owlBtn,
+			margin: 30
+		});
+
 		/*$(".certifications-items.owl-carousel").owlCarousel({
 			nav: true,
 			//items: 3,

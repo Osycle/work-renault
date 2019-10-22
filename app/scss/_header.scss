@@ -274,12 +274,12 @@ $header-min-menu: 70px;
 		min-width: 220px;
 		&:before{
 			@extend .clafclear;
-			width: 100vw;
+			width: 3500px;
 			height: 100vh;
 			background-color: rgba(black, 0.0);
 			top: 00;
 			transition: all 0.3s ease;
-			left: calc( -50vw + 535px);
+			left: -1750px;
 			pointer-events: none;
 		}
 		&:hover{

@@ -6,7 +6,7 @@
 
 $color-1: #ffcc33 !default;
 $color-2: #002768 !default;
-$color-3: #093071 !default;
+$color-3: #409b24 !default;
 $color-4: #f15045 !default;
 $color-5: #65a328 !default;
 $color-special-1: #2e1c11;
@@ -19,8 +19,8 @@ $color-scroll: $color-1;
 $color-footer: #0071BC;
 
 $color-gray-1: #f6f6f6; //#bdbdbd
-$color-gray-2: #f9f9f9;
-$color-gray-3: #9b9b9b;
+$color-gray-2: #eeeeee;
+$color-gray-3: #c8c8c8;
 $color-gray-4: #666666;
 $color-gray-5: #333333;
 
@@ -1126,9 +1126,10 @@ html{
 	.form-control{
 		border-radius: 0;
 		background-color: white;
-		border: 1px solid $color-gray-1;
+		border: 1px solid $color-gray-3;
+		border-radius: 5px;
 		&:focus{
-			border-color: $color-gray-2;
+			border-color: $color-1;
 		}
 	}
 	input.form-control{
@@ -1175,12 +1176,13 @@ html{
 //checkbox
 input[type="checkbox"]:checked{
 	&~.checkbox-style-1, &~label .checkbox-style-1{
-		background-color: $color-1;
+		background-color: $color-3;
 	}		
 }
 .checkbox-style-1{
-	width: 10px;
-	height: 10px;
+	width: 15px;
+	height: 15px;
+	min-width: 15px;
 	display: inline-block;
 	//transition: all 0.05s ease;
 	background-color: transparent;
@@ -1193,16 +1195,14 @@ input[type="checkbox"]:checked{
 	&:before{
 		@extend .claf;
 		@extend .trans-center;
-		width: 18px;
-		height: 18px;
 		border-radius: 3px;
-		border: 2px solid $color-1;
+		border: 1px solid $color-3;
 	}
 }
 //radio
 input[type="radio"]:checked{
 	&~.radio-style-1, &~label .radio-style-1{
-		background-color: $color-1;
+		background-color: $color-3;
 	}		
 }
 
