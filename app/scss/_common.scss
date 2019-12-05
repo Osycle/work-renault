@@ -624,6 +624,12 @@ table {
 .btn-def, .btn-icon{
 	@extend .btn-style;
 	transition: all 0.2s ease;
+	a{
+		min-height: 45px;
+		display: flex !important;
+		align-items: center;
+		justify-content: center;
+	}
 	*{
 		color: inherit;
 	}
@@ -679,17 +685,24 @@ table {
 			}
 		}
 	}
+	.fa-newspaper-o{
+		font-size: 18px !important;
+	}
 	&.radius{
 		border-radius: 20px;
 	}
 	&.reverse{
+		i{
+			color: $color-1;
+		}
 		&:not([class*="bg-color"]){
 			background-image: none;
-			background-color: $color-gray-4;
-			font-weight: 400;
+			color: white;
+			background-color: $color-gray-5;
+			font-weight: 600;
 		}
 		&:not(.changecolor-none):hover{
-			background-color: darken($color-3, 10%);
+			
 		}
 	}
 }
@@ -1031,16 +1044,26 @@ h5{
 	}
 }
 blockquote{
-	padding: 0 15px 0 35px;
+	padding: 15px 15px 15px 35px;
 	border-left: 8px solid;
+	border-color: $color-1;
+	border-width: 5px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	text-align: left;
+	&>h4{
+		margin-top: 0;
+	}
 	h3{
 		font-weight: 700;
 		line-height: 100%;
 		padding: 0;
 		margin: 0;
 	}
+	h4{
+		font-weight: 400;
+	}
 	p{
-		font-weight: 600;
 		font-size: 0.8em;
 	}
 }
